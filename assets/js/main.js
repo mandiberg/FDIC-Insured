@@ -1,0 +1,6 @@
+$(function(){
+	Scroller.initialize()
+
+
+
+})
