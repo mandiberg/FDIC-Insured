@@ -53,7 +53,7 @@
 
         <script src="vendor/js/underscore.js"></script>
         <script src="vendor/js/plugins.js"></script>
-				<script src="vendor/js/jquery.infinitescroll.js"></script>
+				<script src="vendor/js/infinity.js"></script>
         <script src="assets/js/scroll.js"></script>
         <script src="assets/js/main.js"></script>
 

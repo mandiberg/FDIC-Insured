@@ -1,9 +1,10 @@
 #content {
-	margin: 20px;
+	margin: 0px auto;
+	padding: 20px;
 	position: relative;
+	overflow: hidden;
 }
 #fdic-banks {
-	width: 100%;
 	position: relative;
 }
 #fdic-banks .bank {
