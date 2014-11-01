@@ -15,7 +15,11 @@ window.Scroller = (function(){
 			this.column_i = 0;
 			this.current_row = null;
 			this.fetching = false;
-			this.listView = new infinity.ListView(this.$el);
+			this.listView = new infinity.ListView(this.$el, {
+				lazy: function(){
+								self.renderChunk();
+							}
+			});
 			this.renderChunk();
 
 		};
@@ -30,10 +34,12 @@ window.Scroller = (function(){
 				if( self.column_i === self.column_c - 1 ){
 					self.listView.append(self.current_row);
 					self.column_i = 0;
-				}
-				if( !self.last_chunk ){
+				} else {
 					self.renderChunk();
 				}
+			//if( !self.last_chunk ){
+			//	self.renderChunk();
+			//	}
 			});
 		};
 		Scroller.prototype.withNextEntry = function(cb){
@@ -49,6 +55,10 @@ window.Scroller = (function(){
 		Scroller.prototype.getNextEntry = function(){
 			var e = this.collection[this.entry_i++];
 			return e;
+		};
+
+		Scroller.prototype.destroy = function(){
+			this.listView.remove()
 		};
 
 		Scroller.prototype.getNextCollection = function(cb){

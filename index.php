@@ -39,7 +39,11 @@
 					window.g = {};
 					g.constants = {
 						SCROLLER: "#main #fdic-banks",
-						IMG_DIR: "assets/img"
+						IMG_DIR: "assets/img",
+						DATA_PATH: function(page){
+							return "assets/datafile_" + page + ".json"
+						},
+						ITEM_WIDTH: 272
 					};
 
 					g.tmpl = function(name){
