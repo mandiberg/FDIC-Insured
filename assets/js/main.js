@@ -1,11 +1,12 @@
 $(function(){
 	var scroller = buildScroller();
 	function resizeScroller(){
-		scroller.destroy();
 		scroller = buildScroller();
 	};
-	$(window).resize(debounce(resizeScroller, 500, false));
-
+	$(window).resize(function(){
+		debounce(resizeScroller, 500, false)();
+		scroller.destroy();
+	});
 });
 
 function buildScroller(){

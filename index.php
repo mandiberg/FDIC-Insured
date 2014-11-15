@@ -35,10 +35,14 @@
 				<script type="text/html" id="tmpl-bank">
 					<?php require('bank.js.tmpl') ?>
 				</script>
+				<script type="text/html" id="tmpl-spinner">
+					<?php require('spinner.js.tmpl') ?>
+				</script>
 				<script>
 					window.g = {};
 					g.constants = {
 						SCROLLER: "#main #fdic-banks",
+						LOADER_PATH: "assets/img/spinner.gif",
 						IMG_DIR: "assets/img",
 						DATA_PATH: function(page){
 							return "assets/datafile_" + page + ".json"
