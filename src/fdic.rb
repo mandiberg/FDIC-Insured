@@ -4,7 +4,7 @@ require './parser'
 require 'json'
 
 class FDIC
-	OUTPUT_DIR = "../media/assets"
+	OUTPUT_DIR = "../assets/img"
 #	OUTPUT_DIR = "/opt/mandiberg/fdic/media/assets"
 #	INPUT_MEDIA_DIR = "/opt/mandiberg/fdic/logo\ archive/final\ ai\ files"
 	CHUNK_SIZE = 50
