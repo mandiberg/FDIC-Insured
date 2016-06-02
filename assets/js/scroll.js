@@ -50,6 +50,7 @@ window.Scroller = (function(){
 				$(self).find('.banklogo').each(function(){
 					var $ref = $(this);
 					$ref.attr('src', $ref.attr('data-original'));
+					$ref.removeClass('lazy');
 				});
 			});
 		};
