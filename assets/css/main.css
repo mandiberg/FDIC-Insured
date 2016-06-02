@@ -1,0 +1,46 @@
+#content {
+	margin: 0px auto;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+}
+#fdic-banks {
+	position: relative;
+}
+#fdic-banks .bank {
+	position: relative;
+	width: 250px;
+	height: 200px;
+	border: 1px solid #ccc;
+	border-width: 0 1px 1px 0;
+	float: left;
+	padding: 10px;
+}
+#fdic-banks .bank:last-child {
+	border-right: 0px;
+}
+#fdic-banks .bank-data {
+	position: absolute;
+	overflow: hidden;
+	bottom: 11px;
+	left: 10px;
+	background-color: #fff;
+	height: 75px;
+}
+#fdic-banks .bank-data .bank-name {
+	margin: 0 0;
+}
+#fdic-banks .bank .bank-thumb {
+	padding-right: 10px;
+	height: 125px;
+	overflow: hidden;
+}
+#fdic-banks .bank img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+#fdic-banks .bank img.lazy {
+	visibility: hidden;
+}

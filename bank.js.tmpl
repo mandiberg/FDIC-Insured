@@ -1,0 +1,17 @@
+<div class="bank"
+	data-bank-name="<%= c.name %>"
+>
+	<div class="bank-thumb">
+		<img 	class="lazy banklogo thumb" 
+					src="<%= g.constants.LOADER_PATH %>"
+				 	data-original="<%= g.constants.IMG_DIR %>/<%=c.original %>" />
+	</div>
+	<div class="bank-data">
+		<h4 class="bank-name">
+			<%= c.name %>
+		</h4>
+		<small class="bank-closed">
+			Closed <%= c.closed %>
+		</small>
+	</div>
+</div>
