@@ -24,7 +24,16 @@
 
         <!-- Add your site or application content here -->
 				<div id="content">
-					<?php require("base.php") ?>
+					<div id="header">
+						<h1>FDIC Insured</h1>
+					</div>
+					<div id="main">
+						<div id="fdic-banks">
+						</div>
+						<div class="loader"></div>
+					</div>
+					<div id="footer">
+					</div>
 				</div>
 
 				<a id="nextDataFile" href="assets/_datafile_0.json"></a>
@@ -33,10 +42,30 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="vendor/js/jquery-1.10.2.min.js"><\/script>')</script>
 				<script type="text/html" id="tmpl-bank">
-					<?php require('bank.js.tmpl') ?>
+					<div class="bank"
+						data-bank-name="<%= c.name %>"
+					>
+						<div class="bank-thumb">
+							<img 	class="lazy banklogo thumb" 
+										src="<%= g.constants.LOADER_PATH %>"
+										data-original="<%= g.constants.IMG_DIR %>/<%=c.original %>" />
+						</div>
+						<div class="bank-data">
+							<h4 class="bank-name">
+								<%= c.name %>
+							</h4>
+							<small class="bank-closed">
+								Closed <%= c.closed %>
+							</small>
+						</div>
+					</div>
 				</script>
 				<script type="text/html" id="tmpl-spinner">
-					<?php require('spinner.js.tmpl') ?>
+					<div style="clear:left">
+						<img  src="<%= c.spinner_url %>"  
+									width="64px" height="64px"
+						/>
+					</div>
 				</script>
 				<script>
 					window.g = {};
